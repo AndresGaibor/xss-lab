@@ -1,0 +1,107 @@
+:root {
+  --bg-1: #f8fafc;
+  --bg-2: #eef2ff;
+  --panel: rgba(255, 255, 255, 0.88);
+  --border: rgba(15, 23, 42, 0.08);
+  --text: #0f172a;
+  --muted: #64748b;
+  --primary: #2563eb;
+  --primary-soft: #dbeafe;
+  --danger-soft: #fee2e2;
+  --success-soft: #dcfce7;
+}
+
+body {
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at top left, rgba(37, 99, 235, 0.12), transparent 28%),
+    radial-gradient(circle at bottom right, rgba(139, 92, 246, 0.1), transparent 28%),
+    linear-gradient(180deg, var(--bg-2) 0%, var(--bg-1) 100%);
+  color: var(--text);
+}
+
+.hero-card,
+.panel-card,
+.comment-card,
+.stats-box {
+  background: var(--panel);
+  backdrop-filter: blur(8px);
+  border: 1px solid var(--border);
+}
+
+.hero-card {
+  border: 1px solid rgba(37, 99, 235, 0.12);
+}
+
+.stats-box {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.95), rgba(248, 250, 252, 0.88));
+}
+
+.btn-route {
+  background: white;
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  color: #334155;
+}
+
+.btn-route:hover {
+  background: #f8fafc;
+  color: #0f172a;
+  border-color: rgba(37, 99, 235, 0.28);
+}
+
+.btn-route.active-route {
+  background: var(--primary);
+  color: white;
+  border-color: var(--primary);
+}
+
+.custom-alert {
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  background: #f8fafc;
+  color: #334155;
+  border-radius: 1rem;
+}
+
+.form-control {
+  border: 1px solid rgba(15, 23, 42, 0.12);
+  box-shadow: none !important;
+}
+
+.form-control:focus {
+  border-color: rgba(37, 99, 235, 0.45);
+  box-shadow: 0 0 0 0.2rem rgba(37, 99, 235, 0.12) !important;
+}
+
+.comments-grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.comment-card {
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.comment-card:hover {
+  transform: translateY(-2px);
+}
+
+.comment-body {
+  line-height: 1.7;
+  color: #334155;
+  overflow-wrap: anywhere;
+}
+
+.empty-state {
+  background: rgba(248, 250, 252, 0.8);
+  border: 1px dashed rgba(15, 23, 42, 0.12) !important;
+}
+
+@media (max-width: 991.98px) {
+  .hero-card {
+    padding: 1.75rem !important;
+  }
+
+  .panel-card {
+    padding: 1.5rem !important;
+  }
+}
